@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"/>
+
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./Styles/output.css">
+    <title>Burgertown</title>
+</head>
+<body>
+    
+     <!-- Header -->
+    <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center ">
+
+        <div class="w-full h-full flex flex-col justify-center items-center">
+
+            <img 
+            src="./Assets/hamb-1.png" 
+            alt="Logo"
+            class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
+            >
+            <h1 class="text-4xl mt-4 mb-2 font-bold text-white">Burgertown</h1>
+
+            <span class="text-white font-medium">Rua 10, Rio de Janeiro</span>
+
+            <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
+                <span class="text-white font-medium">Seg á Dom - 18:00 as 22:00</span>
+            </div>
+
+        </div>
+    </header>
+   <!-- Fim do Header-->
+
+<div class="w-full h-full flex justify-center items-center hidden " id="pedidofinalizado">
+
+    <div class="flex bg-green-500 mt-5 p-2  rounded-md">
+        <p class="text-white font-medium mr-2">Seu pedido foi realizado </p> 
+        <span class="flex justify-end text-white" > x </span>
+    </div>
+
+
+</div>
+
+   <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
+    Conheça nosso menu
+   </h2>
+
+   <!--Inicio menu-->
+    <div id="menu">
+    
+<main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+
+        <!--Inicio Produto-->
+
+        <div  class="flex gap-2">
+
+            <img src="./Assets/hamb-1.png" 
+            alt="hambuguer 1"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+            >
+        
+
+         <div>
+
+            <p class="font-bold">Double Garden Delight</p>
+
+            <p class="text-sm">Pão leve de fermentação natural, 2 carnes de 160g, 
+                queijo, molho especial, salada e tomate.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+
+                <p class="font-bold text-lg">$8.00</p>
+
+                <button class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Double Garden Delight"
+                data-price="8.00"
+                >
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+        <!--Fim Produto-->
+
+        <!--Inicio Produto-->
+
+        <div  class="flex gap-2">
+
+            <img src="./Assets/hamb-2.png" 
+            alt="hambuguer 2"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+            >
+        
+
+         <div>
+
+            <p class="font-bold">Bacon Bliss</p>
+
+            <p class="text-sm">Pão leve de fermentação natural, 2 carnes de 160g, bacon crocante, queijo e 
+                ketchup misturados no pão.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+
+                <p class="font-bold text-lg">$12.00</p>
+
+                <button class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Bacon Bliss"
+                data-price="12.00"
+                >
+                    <i class="fa fa-cart-plus text-lg text-white "></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+        <!--Fim Produto-->
+
+        <!--Inicio Produto-->
+
+        <div  class="flex gap-2">
+
+            <img src="./Assets/hamb-3.png" 
+            alt="hambuguer 3"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+            >
+        
+
+         <div>
+
+            <p class="font-bold">Provolone & Cheddar Fusion</p>
+
+            <p class="text-sm">Pão leve de fermentação natural, 2 carnes de 160g, queijo provolone 
+                e cheddar, definitivament uma explosão de sabores.</p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+
+                <p class="font-bold text-lg">$10.00</p>
+
+                <button class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Provolone & Cheddar Fusion"
+                data-price="10.00"
+                >
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--Fim Produto-->
+
+    <!--Inicio Produto-->
+
+    <div  class="flex gap-2">
+
+        <img src="./Assets/hamb-4.png" 
+        alt="hambuguer 4"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+        >
+    
+
+     <div>
+
+        <p class="font-bold">Crispy Chicken Classic</p>
+
+        <p class="text-sm">Pão leve de fermentação natural, carne de frango empanada de 160g, 
+            picles, cebola, tomate e salada.</p>
+
+        <div class="flex items-center gap-2 justify-between mt-3">
+
+            <p class="font-bold text-lg">$7.00</p>
+
+            <button class="bg-gray-900 px-5 rounded add-to-cart-btn"
+            data-name="Crispy Chicken Classic"
+            data-price="7.00"
+            >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <!--Fim Produto-->
+
+    <!--Inicio Produto-->
+
+    <div  class="flex gap-2">
+
+    <img src="./Assets/hamb-5.png" 
+    alt="hambuguer 5"
+    class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+    >
+
+
+ <div>
+
+    <p class="font-bold">Simple Pleasure</p>
+
+    <p class="text-sm">Pão leve de fermentação natural, 1 carne de 160g, queijo, tomates e salada 
+        num pãozinho fofinho.</p>
+
+    <div class="flex items-center gap-2 justify-between mt-3">
+
+        <p class="font-bold text-lg">$6.00</p>
+
+        <button class="bg-gray-900 px-5 rounded add-to-cart-btn"
+        data-name="Simple Pleasure"
+        data-price="6.00"
+        >
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+
+        </button>
+
+    </div>
+
+</div>
+
+</div>
+
+    <!--Fim Produto-->
+
+    <!--Inicio Produto-->
+
+    <div  class="flex gap-2">
+
+        <img src="./Assets/hamb-6.png" 
+        alt="hambuguer 6"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+        >
+    
+    
+     <div>
+    
+        <p class="font-bold">Ketchup Crunch</p>
+    
+        <p class="text-sm">Pão leve de fermentação natural, 1 carne de 160g, queijo, cebola, tomate, 
+            salada e ketchup.</p>
+    
+        <div class="flex items-center gap-2 justify-between mt-3">
+    
+            <p class="font-bold text-lg">$8.00</p>
+    
+            <button class="bg-gray-900 px-5 rounded add-to-cart-btn"
+            data-name="Ketchup Crunch"
+            data-price="8.00"
+            >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+    
+            </button>
+    
+        </div>
+    
+    </div>
+    
+</div>
+
+    <!--Fim Produto-->
+
+    <!--Inicio Produto-->
+
+    <div  class="flex gap-2">
+
+        <img src="./Assets/hamb-7.png" 
+        alt="hambuguer 7"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+        >
+    
+    
+     <div>
+    
+        <p class="font-bold">Onion Ring Supreme</p>
+    
+        <p class="text-sm">Pão leve de fermentação natural, 2 carnes de 160g, queijo, cebola e anéis 
+            de cebola crocantes.</p>
+    
+        <div class="flex items-center gap-2 justify-between mt-3">
+    
+            <p class="font-bold text-lg">$10.00</p>
+    
+            <button class="bg-gray-900 px-5 rounded add-to-cart-btn"
+            data-name="Onion Ring Supreme"
+            data-price="10.00"
+            >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+    
+            </button>
+    
+        </div>
+    
+    </div>
+    
+</div>
+
+    <!--Fim Produto-->
+
+    <!--Inicio Produto-->
+
+    <div  class="flex gap-2">
+
+        <img src="./Assets/hamb-8.png" 
+        alt="hambuguer 8"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+        >
+    
+    
+     <div>
+    
+        <p class="font-bold">Vegan Fresh</p>
+    
+        <p class="text-sm">Pão leve de fermentação natural, hambúrguer vegano de 160g, mix de saladas 
+            frescas, hambúrguer natural.</p>
+    
+        <div class="flex items-center gap-2 justify-between mt-3">
+    
+            <p class="font-bold text-lg">$9.00</p>
+    
+            <button class="bg-gray-900 px-5 rounded add-to-cart-btn"
+            data-name="Vegan Fresh"
+            data-price="9.00"
+            >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+    
+            </button>
+    
+        </div>
+    
+    </div>
+    
+</div>
+
+    <!--Fim Produto-->
+
+</main>
+
+    <div class="mx-auto max-w-7xl px-2 my-2 w-full">
+
+        <h2 class="font-bold text-3xl flex justify-center mb-5">
+            Bebidas
+        </h2>
+
+    </div>
+
+<!--Grid bebidas-->
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16" id="menu">
+
+        <!--Inicio bebida Produto-->
+
+        <div  class="flex gap-2 w-full">
+
+
+            <img src="./Assets/refri-1.png" 
+            alt="Cola Lata"
+            class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+            >
+        
+
+         <div class="w-full">
+
+            <p class="font-bold">Cola Lata</p>
+
+            <p class="text-sm"></p>
+
+            <div class="flex items-center gap-2 justify-between mt-3">
+
+                <p class="font-bold text-lg">$2.00</p>
+
+                <button class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                data-name="Cola Lata"
+                data-price="2.00"
+                >
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div> 
+
+        <!--Fim bebida Produto-->
+
+    
+        <!--Inicio bebida Produto-->
+
+     <div  class="flex gap-2 w-full">
+
+
+        <img src="./Assets/refri-2.png" 
+        alt="Guaraná Lata"
+        class="w-28 h-28 rounded-md hover:scale-110 hover:rotate-2 duration-300"
+        >
+    
+
+     <div class="w-full">
+
+        <p class="font-bold">Guaraná Lata</p>
+
+        <p class="text-sm"></p>
+
+        <div class="flex items-center gap-2 justify-between mt-3">
+
+            <p class="font-bold text-lg">$2.00</p>
+
+            <button class="bg-gray-900 px-5 rounded add-to-cart-btn"
+            data-name="Guarana Lata"
+            data-price="2.00"
+            >
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div> 
+
+        <!--Fim bebida Produto-->
+
+    </div>
+
+<!-- Fim Grid bebidas-->
+
+</div>
+
+    <!--Fim menu-->
+
+    <!--modal cart-->
+
+    <div class="bg-black/50 w-full h-full fixed top-0 left-0 z-[99] 
+    hidden items-center justify-center "
+    id="modal-cart"
+    >
+        
+        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+
+            <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
+
+            <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+
+            <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+
+            <p class="font-bold mt-4">Endereço de entrega:</p>
+                <input 
+                type="text"
+                placeholder="digite seu endereço"
+                id="address"
+                class="w-full border-2 p-1 rounded my-1"
+                >
+            
+            <p id="address-warn" class="text-red-500 hidden" >digite o endereço correto</p>
+
+            <div class="flex items-center justify-between mt-5 w-full">
+                <button id="close-modal-btn" class="bg-gray-200 rounded px-4 py-1">Fechar</button>
+
+                <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--Fim modal cart-->
+
+    <!--Footer-->
+
+   <footer class="w-full bg-red-500 py-2 fixed bottom-0 z-40 flex items-center justify-center">
+    
+    <button 
+    class="flex items-center gap-2 text-white font-bold"
+    id="cart-btn"
+    >
+    
+        (<span id="cart-count"> 0 </span>)
+
+        veja meu carrinho
+
+        <i class="fa fa-cart-plus text-lg text-white"></i>
+    </button>
+   </footer>
+
+   <!--Fi Footer-->
+
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+   <script src="script.js"></script>
+
+   
+</body>
+</html> 
